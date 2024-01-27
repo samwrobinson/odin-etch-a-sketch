@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+p {
+    text-align: center;
+}
+
+/* ID Formatting */
+
+#inputBox {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: auto;
+    margin: 2% 35%;
+    border: 1px solid black;
+    justify-content: center;
+    
+}
+
+#userInput, #submit {
+    height: auto;
+    width: 70%;
+    margin: 0 15%;
+}
+
+#controls {
+    display: flex;
+    height: 5%;
+    width: 40%;
+    margin: 1% 30%;
+    justify-content: space-evenly;
+}
+
+/* Class Style Formatting */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80%;
+    width: 40%;
+    margin: 0% 30%;
+    border: solid 1px black;
+}
+.pixel {
+    box-sizing: border-box;
+}
+/* Color toggle switch styleing*/
+.switch {
+    position: relative;
+    width: 54px; /* Width of the switch */
+    height: 28px; /* Height of the switch */
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Off state color */
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px; /* Height of the slider */
+    width: 20px; /* Width of the slider */
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  input:checked + .slider {
+    background-color: #2196F3; /* On state color */
+  }
+  
+  /* Move the slider to the right when checked */
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
