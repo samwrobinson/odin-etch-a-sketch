@@ -38,11 +38,27 @@ button.addEventListener('click', (e) => {
         event.target.style.backgroundColor = 'black';
     }
 
+    function randomColor(event) {
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i=0; i<6; i++) {
+            color += letters[Math.floor(Math.random()*16)];
+        }
+        event.target.style.backgroundColor = color;
+    }
+
     let pixel = document.querySelectorAll('.pixel');
 
     pixel.forEach(pixel => {
         pixel.addEventListener('mouseover', darken);
     });
+
+    let colorSwitch = document.querySelector('.switch');
+    colorSwitch.addEventListener('click', () => {
+    pixel.forEach(pixel => {
+        pixel.addEventListener('mouseover', randomColor);
+        });
+    });    
 });
 
 // Clear divs when button is clicked
